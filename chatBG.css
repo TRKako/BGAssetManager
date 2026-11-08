@@ -1,0 +1,93 @@
+    /**
+ * @name Chat Background
+ * @description Gives the BG a background
+ * @author TRKako
+ * @version 
+ * @invite 
+ * @website 
+ * @source 
+ * @authorId 700076432076046396
+ * @authorLink 
+*/
+
+/* #region chatBG.css */
+
+:root {
+    --badges-background: var(--redesign-button-overlay-alpha-background);
+    /*adds a semi transparent background behind badges*/
+}
+
+.chat_z_gUBg .chatContent_z_gUBg {
+    --theme-base-color-light-hsl: 227.0588235294118 100% 90%;
+    --theme-base-color-light: rgb(204, 215, 255);
+    --theme-text-color-light: rgb(0, 28, 128);
+    --theme-base-color-dark-hsl: 226.15384615384616 100% 5.098039215686274%;
+    --theme-base-color-dark: rgb(0, 6, 26);
+    --theme-text-color-dark: rgb(153, 176, 255);
+    --theme-base-color-amount: 100%;
+    --theme-text-color-amount: 100%;
+    --bg-overlay-selected: unset;
+    --bg-overlay-hover: unset;
+    --bg-overlay-active: unset;
+
+
+
+/*                                                                   ID                             */
+/*                                                                   │                              */
+/*                                                                   │                              */
+/*                                                                   │                              */
+/*                                                                  \ /                             */
+/*                                                                   *                              */
+/*                                            ID --->         0000000000000000000                   */
+    --background-url: url("https://pfp-api-coral.vercel.app/api/banner/0000000000000000000/4096&v=new");
+
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: var(--background-url);
+        opacity: 0.06;
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(0.9px);
+    }
+}
+
+[class*="chatContent"] {
+    --theme-base-color-light-hsl: 227.0588235294118 100% 90%;
+    --theme-base-color-light: rgb(204, 215, 255);
+    --theme-text-color-light: rgb(0, 28, 128);
+    --theme-base-color-dark-hsl: 226.15384615384616 100% 5.098039215686274%;
+    --theme-base-color-dark: rgb(0, 6, 26);
+    --theme-text-color-dark: rgb(153, 176, 255);
+    --theme-base-color-amount: 100%;
+    --theme-text-color-amount: 100%;
+    --bg-overlay-selected: unset;
+    --bg-overlay-hover: unset;
+    --bg-overlay-active: unset;
+
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: var(--background-url);
+        opacity: 0.5;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(3px);
+    }
+}
+
+/* #endregion */
